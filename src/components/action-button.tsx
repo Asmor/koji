@@ -55,15 +55,20 @@ const StyledButton = styled.label<StyledButtonProps>`
 export interface ActionButtonProps {
 	// children: ReactNode;
 	number: 1 | 2 | 3 | 4;
+	clickHandler: (number: 1 | 2 | 3 | 4) => void;
 }
 
-const ActionButton: FunctionComponent<ActionButtonProps> = ({ number }) => {
+const ActionButton: FunctionComponent<ActionButtonProps> = ({ number, clickHandler }) => {
 	const aspectRatio = useAspectRatio();
-	const { getIcon } = useActionSet();
+	const { getIcon, getDesc } = useActionSet();
 	return <>
-		<StyledButton orientation={aspectRatio}>
+		<StyledButton
+			orientation={aspectRatio}
+			onClick={() => clickHandler(number)}
+		>
 			<Image
 				src={getIcon(number)}
+				title={getDesc(number)}
 				alt=""
 			/>
 			<input type="checkbox"/>

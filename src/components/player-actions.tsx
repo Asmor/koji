@@ -1,6 +1,13 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import ActionButton from "./action-button";
+import useActionSet from "@/hooks/useActionSet";
+
+const HelpText = styled.div`
+	text-align: center;
+	font-size: 24px;
+	cursor: pointer;
+`;
 
 const ButtonsContainer = styled.div`
 	display: flex;
@@ -10,12 +17,24 @@ const ButtonsContainer = styled.div`
 `;
 
 const PlayerActions: FunctionComponent = () => {
+	const [helpText, setHelpText] = useState("");
+	const { getDesc, currentSet } = useActionSet();
+	const showHelp = useCallback((n: 1 | 2 | 3 | 4) => {
+		setHelpText(getDesc(n));
+	}, [setHelpText, getDesc]);
+
+	const clearHelpText = useCallback(() => setHelpText(""), [setHelpText]);
+
+	// Clear the help text when the set changes
+	useEffect(clearHelpText, [currentSet, clearHelpText]);
+
 	return <>
+		{helpText && <HelpText onClick={clearHelpText}>{ helpText }</HelpText>}
 		<ButtonsContainer>
-			<ActionButton number={1}/>
-			<ActionButton number={2}/>
-			<ActionButton number={3}/>
-			<ActionButton number={4}/>
+			<ActionButton number={1} clickHandler={showHelp}/>
+			<ActionButton number={2} clickHandler={showHelp}/>
+			<ActionButton number={3} clickHandler={showHelp}/>
+			<ActionButton number={4} clickHandler={showHelp}/>
 		</ButtonsContainer>
 	</>;
 };
