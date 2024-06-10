@@ -2,6 +2,7 @@
 
 import PlayerActions from "@/components/player-actions";
 import GameTracker from "@/screens/game-tracker";
+import { RecoilRoot } from "recoil";
 import styled from "styled-components";
 
 const Main = styled.main`
@@ -10,8 +11,10 @@ const Main = styled.main`
 
 export default function Home() {
   return (
-    <Main>
-      <GameTracker/>
-    </Main>
+    <RecoilRoot>
+      <Main>
+        <GameTracker/>
+      </Main>
+    </RecoilRoot>
   );
 }

@@ -59,10 +59,9 @@ export interface ActionButtonProps {
 
 const ActionButton: FunctionComponent<ActionButtonProps> = ({ number }) => {
 	const aspectRatio = useAspectRatio();
-	const {getIcon, currentSet} = useActionSet();
+	const { getIcon } = useActionSet();
 	return <>
 		<StyledButton orientation={aspectRatio}>
-			{/* {currentSet} */}
 			<Image
 				src={getIcon(number)}
 				alt=""

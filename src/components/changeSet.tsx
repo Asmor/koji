@@ -10,10 +10,10 @@ const ChangeControls = styled.div`
 `;
 
 const ChangeSet: FunctionComponent = () => {
-	const { setName, incSet, decSet } = useActionSet();
+	const { getSetName, incSet, decSet } = useActionSet();
 	return <ChangeControls>
 		<button onClick={decSet}>Prev</button>
-		{ setName }
+		{getSetName() }
 		<button onClick={incSet}>Next</button>
 	</ChangeControls>;
 };
