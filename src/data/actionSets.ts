@@ -23,6 +23,17 @@ import referral1 from "../../assets/1-referral.svg";
 import competition3 from "../../assets/3-competition.svg";
 import giftBig4 from "../../assets/4-gift-big.svg";
 
+// secret1
+// referral2
+import discard3 from "../../assets/3-discard.svg";
+import giftTwo4 from "../../assets/4-gift-two.svg";
+
+// giveaway1
+import gift2 from "../../assets/2-gift.svg";
+import reveal3 from "../../assets/3-reveal.svg";
+import transmit4 from "../../assets/4-transmit.svg";
+
+
 export interface Tile {
 	icon: any;
 	desc: string;
@@ -34,7 +45,7 @@ const sets: Tile[][] = [
 		{ icon: secret1, desc: "Keep 1 face down." },
 		{ icon: discard2, desc: "Discard 2." },
 		{ icon: gift3, desc: "Offer 3. Opponent takes 1." },
-		{ icon: competition4, desc: "Offer 2 pairs. Opponent takes 1 pair." }
+		{ icon: competition4, desc: "Offer 2 pairs. Opponent takes choice." }
 	],
 	// Expansion 1
 	[
@@ -64,6 +75,27 @@ const sets: Tile[][] = [
 		{ icon: competition3, desc: "Offer pair and single. Opponent takes choice." },
 		{ icon: giftBig4, desc: "Offer 4. Opponent takes 1." },
 	],
+	// Expansion 5
+	[
+		{ icon: secret1, desc: "Keep 1 face down." },
+		{ icon: referral2, desc: "Put 2 under deck. Keep top 2 cards from deck." },
+		{ icon: discard3, desc: "Discard 3." },
+		{ icon: giftTwo4, desc: "Offer 4. Opponent takes 2." },
+	],
+	// Expansion 6
+	[
+		{ icon: giveaway1, desc: "Give 1 face down to opponent. May not be looked at." },
+		{ icon: gift2, desc: "Offer 2. Opponent takes 1." },
+		{ icon: reveal3, desc: "Play 3." },
+		{ icon: transmit4, desc: "Offer 4 face down. Opponent discards 3 unseen." },
+	],
+	// Expansion 7
+	// [
+	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
+	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
+	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
+	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
+	// ],
 ];
 
 export { sets };
