@@ -52,14 +52,14 @@ const sets: Tile[][] = [
 		{ icon: discard1, desc: "Discard 1." },
 		{ icon: secret2, desc: "Keep 2 face down." },
 		{ icon: transmit3, desc: "Offer 3 face down. Opponent discards 2 unseen." },
-		{ icon: gift4, desc: "Offer 4. Opponent takes 2." }
+		{ icon: gift4, desc: "Offer 4. Opponent takes 2." },
 	],
 	// Expansion 2
 	[
 		{ icon: giveaway1, desc: "Give 1 face down to opponent. May not be looked at." },
 		{ icon: reveal2, desc: "Play 2." },
 		{ icon: giftRev3, desc: "Offer 3. Opponent takes 2." },
-		{ icon: intercept4, desc: "Display 4. Opponent discards 2." }
+		{ icon: intercept4, desc: "Display 4. Opponent discards 2." },
 	],
 	// Expansion 3
 	[
@@ -90,12 +90,12 @@ const sets: Tile[][] = [
 		{ icon: transmit4, desc: "Offer 4 face down. Opponent discards 3 unseen." },
 	],
 	// Expansion 7
-	// [
-	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
-	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
-	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
-	// 	{ icon: null, desc: "xxxxxxxxxxxxxxx" },
-	// ],
+	[
+		{ icon: giveaway1, desc: "Give 1 face down to opponent. May not be looked at." },
+		{ icon: gift2, desc: "Offer 2. Opponent takes 1." },
+		{ icon: discard3, desc: "Discard 3." },
+		{ icon: competition4, desc: "Offer 2 pairs. Opponent takes choice." },
+	],
 ];
 
 export { sets };
