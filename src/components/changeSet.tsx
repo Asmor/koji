@@ -1,4 +1,4 @@
-import useActionSet from "@/hooks/useActionIcons";
+import useActionSet from "@/hooks/useActionSet";
 import { FunctionComponent } from "react";
 import styled from "styled-components";
 

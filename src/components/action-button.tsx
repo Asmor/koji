@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import Keep1 from "../../assets/1-keep.svg";
 import Image from "next/image";
-import useActionSet from "@/hooks/useActionIcons";
+import useActionSet from "@/hooks/useActionSet";
 
 interface StyledButtonProps {
 	orientation: AspectRatio;
