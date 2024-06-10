@@ -3,6 +3,9 @@
   --foreground: #fff;
   --gutter: 4px;
   height: 100%;
+
+  --setControlsZIndex: 1;
+  --playerControlsZIndex: 2;
 }
 
 * {
