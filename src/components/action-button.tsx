@@ -2,7 +2,6 @@ import useAspectRatio, { AspectRatio } from "@/hooks/useAspectRatio";
 import { FunctionComponent, ReactNode } from "react";
 import styled from "styled-components";
 
-import Keep1 from "../../assets/1-keep.svg";
 import Image from "next/image";
 import useActionSet from "@/hooks/useActionSet";
 
@@ -25,7 +24,7 @@ const StyledButton = styled.label<StyledButtonProps>`
 
 	border: 2px solid transparent;
 	border-radius: 8px;
-	background-color: #333;
+	background-color: #4a2145cc;
 
 	user-select: none;
 
