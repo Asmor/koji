@@ -18,13 +18,14 @@ interface PagerProps {
 }
 
 const Pager = styled.button<PagerProps>`
-	background: #333;
+	background: transparent;
 	border-radius: 8px;
 	font-size: 10vh;
 	border: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 
 	${ p => {
 		if ( p.orientation === AspectRatio.LANDSCAPE ) return css`
@@ -38,12 +39,19 @@ const Pager = styled.button<PagerProps>`
 	} }
 
 	> img {
-		max-width: 50px;
+		max-width: 80%;
+		max-height: 80%;
 	}
 `;
 
 const RevImage = styled(Image)`
 	transform: rotate(180deg);
+`;
+
+const SetName = styled.div`
+	padding: 10px;
+	background-color: var(--neutral-button);
+	border-radius: 8px;
 `;
 
 const ChangeSet: FunctionComponent = () => {
@@ -53,7 +61,7 @@ const ChangeSet: FunctionComponent = () => {
 		<Pager onClick={decSet} orientation={orientation}>
 			<RevImage src={arrow} alt=""/>
 		</Pager>
-		{getSetName() }
+		<SetName>{getSetName()}</SetName>
 		<Pager onClick={incSet} orientation={orientation}>
 			<Image src={arrow} alt=""/>
 		</Pager>

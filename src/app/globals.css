@@ -1,6 +1,7 @@
 :root {
   --background: #000;
   --foreground: #fff;
+  --neutral-button: #333a;
   --gutter: 4px;
   height: 100%;
 

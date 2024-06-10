@@ -37,9 +37,9 @@ const StyledButton = styled.label<StyledButtonProps>`
 		position: absolute;
 	}
 
-	&:has(:focus) {
+	/* &:has(:focus) {
 		border-color: #ccc;
-	}
+	} */
 
 	&:has(:checked) {
 		opacity: 0.5;
