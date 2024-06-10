@@ -1,19 +1,11 @@
-"use client";
-
 import GameTracker from "@/screens/game-tracker";
-import { RecoilRoot } from "recoil";
-import styled from "styled-components";
-
-const Main = styled.main`
-  height: 100%;
-`;
+import { Metadata } from "next";
 
 export default function Home() {
-  return (
-    <RecoilRoot>
-      <Main>
-        <GameTracker/>
-      </Main>
-    </RecoilRoot>
-  );
+  return ( <GameTracker/> );
 }
+
+export const metadata: Metadata = {
+  title: "Koji",
+  description: "An action tracker for Hanamikoji",
+};

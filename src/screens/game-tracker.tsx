@@ -1,7 +1,17 @@
+"use client";
+
 import ChangeSet from "@/components/changeSet";
 import PlayerActions from "@/components/player-actions";
 import { FunctionComponent } from "react";
+import { RecoilRoot } from "recoil";
 import styled from "styled-components";
+import tsunami from "../../assets/Tsunami_by_hokusai_19th_century.jpg";
+
+const Main = styled.main`
+  height: 100%;
+  background: url(${tsunami.src});
+  background-size: cover;
+`;
 
 const Actions = styled.div`
 	position: fixed;
@@ -33,15 +43,19 @@ const SetControls = styled.div`
 
 const GameTracker: FunctionComponent = () => {
 	return <>
-		<P1Actions>
-			<PlayerActions/>
-		</P1Actions>
-		<P2Actions>
-			<PlayerActions/>
-		</P2Actions>
-		<SetControls>
-			<ChangeSet/>
-		</SetControls>
+		<Main>
+			<RecoilRoot>
+				<P1Actions>
+					<PlayerActions/>
+				</P1Actions>
+				<P2Actions>
+					<PlayerActions/>
+				</P2Actions>
+				<SetControls>
+					<ChangeSet/>
+				</SetControls>
+			</RecoilRoot>
+		</Main>
 	</>;
 };
 
